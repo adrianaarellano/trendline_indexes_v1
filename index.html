@@ -10,8 +10,12 @@
       text-align: center;
       margin: 20px;
     }
+    .dropdown-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
     select {
-      margin-top: 10px;
       padding: 10px;
       font-size: 16px;
     }
@@ -19,7 +23,7 @@
       border: none;
       width: 80%;
       height: 700px;
-      margin-top: 20px;
+      margin-top: 10px;
     }
   </style>
 </head>
@@ -27,15 +31,17 @@
   <h1>Interactive Trendlines</h1>
   <p>Select an index to explore how it changes across the years.</p>
   
-  <!-- Dropdown for selecting the index -->
-  <select id="indexSelector" onchange="switchMap()">
-    <option value="https://adrianaarellano.github.io/comp_trendline_overall/" selected>Overall</option>
-    <option value="https://adrianaarellano.github.io/comp_trendline_non_system/">Non-System</option>
-    <option value="https://adrianaarellano.github.io/comp_trendline_policy/">Policy</option>
-    <option value="https://adrianaarellano.github.io/comp_trendline_practice/">Practice</option>
-    <option value="https://adrianaarellano.github.io/comp_trendline_levels/">Levels</option>
-    <option value="https://adrianaarellano.github.io/comp_trendline_equality/">Equality</option>
-  </select>
+  <!-- Centered dropdown -->
+  <div class="dropdown-container">
+    <select id="indexSelector" onchange="switchMap()">
+      <option value="https://adrianaarellano.github.io/comp_trendline_overall/" selected>Overall</option>
+      <option value="https://adrianaarellano.github.io/comp_trendline_non_system/">Non-System</option>
+      <option value="https://adrianaarellano.github.io/comp_trendline_policy/">Policy</option>
+      <option value="https://adrianaarellano.github.io/comp_trendline_practice/">Practice</option>
+      <option value="https://adrianaarellano.github.io/comp_trendline_levels/">Levels</option>
+      <option value="https://adrianaarellano.github.io/comp_trendline_equality/">Equality</option>
+    </select>
+  </div>
   
   <!-- The iframe container -->
   <iframe id="mapFrame" src="https://adrianaarellano.github.io/comp_trendline_overall/">
@@ -51,4 +57,3 @@
   </script>
 </body>
 </html>
-
