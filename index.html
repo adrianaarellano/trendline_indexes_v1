@@ -24,41 +24,31 @@
   </style>
 </head>
 <body>
-  <h1>Index Trendlines</h1>
-  <p>Select an index to explore how it changes across the years</p>
-
-  <!-- Dropdown for selecting an index -->
-  <label for="indexSelector">Select Index:</label>
+  <h1>Interactive Trendlines</h1>
+  <p>Select an index to explore how it changes across the years.</p>
+  
+  <!-- Dropdown for selecting the index -->
   <select id="indexSelector" onchange="switchMap()">
-    <option value="overall" selected>Overall</option>
-    <option value="non-system">Non-System</option>
-    <option value="policy">Policy</option>
-    <option value="practice">Practice</option>
-    <option value="levels">Levels</option>
-    <option value="equality">Equality</option>
+    <option value="https://adrianaarellano.github.io/comp_trendline_overall/" selected>Overall</option>
+    <option value="https://adrianaarellano.github.io/comp_trendline_non_system/">Non-System</option>
+    <option value="https://adrianaarellano.github.io/comp_trendline_policy/">Policy</option>
+    <option value="https://adrianaarellano.github.io/comp_trendline_practice/">Practice</option>
+    <option value="https://adrianaarellano.github.io/comp_trendline_levels/">Levels</option>
+    <option value="https://adrianaarellano.github.io/comp_trendline_equality/">Equality</option>
   </select>
-
+  
   <!-- The iframe container -->
-  <iframe id="mapFrame" src="https://adrianaarellano.github.io/comp_trendline_overall/">
+  <iframe id="mapFrame" src="https://adrianaarellano.github.io/overall/">
     Your browser does not support iframes.
   </iframe>
-
+  
   <script>
-    // Predefined mapping for index pages
-    const indexPages = {
-      "overall": "https://adrianaarellano.github.io/comp_trendline_overall/",
-      "non-system": "https://adrianaarellano.github.io/comp_trendline_non_system/",
-      "policy": "https://adrianaarellano.github.io/comp_trendline_policy/",
-      "practice": "https://adrianaarellano.github.io/comp_trendline_practice/",
-      "levels": "https://adrianaarellano.github.io/comp_trendline_levels/",
-      "equality": "https://adrianaarellano.github.io/comp_trendline_equality/"
-    };
-
     // Function to switch the iframe source
     function switchMap() {
-      const selectedIndex = document.getElementById("indexSelector").value;
-      document.getElementById("mapFrame").src = indexPages[selectedIndex];
+      const selectedURL = document.getElementById("indexSelector").value;
+      document.getElementById("mapFrame").src = selectedURL;
     }
   </script>
 </body>
 </html>
+
